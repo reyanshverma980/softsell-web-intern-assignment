@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import { ThemeProvider } from "next-themes";
+import Footer from "@/components/footer";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
     title: "SoftSell - Software License Resale Made Easy",
     description:
       "SoftSell helps businesses sell unused software licenses quickly and at the best price. Upload, get valued, get paid.",
-    url: "https://softsell.vercel.app",
+    url: "https://softsell.vercel.app", //
     siteName: "SoftSell",
     images: [
       {
@@ -40,8 +43,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={roboto.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
