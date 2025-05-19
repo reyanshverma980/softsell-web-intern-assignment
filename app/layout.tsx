@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/footer";
+import ChatWidget from "@/components/chat/chat-widget";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     title: "SoftSell - Software License Resale Made Easy",
     description:
       "SoftSell helps businesses sell unused software licenses quickly and at the best price. Upload, get valued, get paid.",
-    url: "https://softsell.vercel.app", //
+    url: "https://softsell-liard-rho.vercel.app",
     siteName: "SoftSell",
     images: [
       {
@@ -54,6 +55,7 @@ export default function RootLayout({
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>
