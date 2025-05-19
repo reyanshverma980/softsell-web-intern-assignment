@@ -4,10 +4,21 @@ SoftSell is a sleek, user-friendly web application designed to provide a smooth 
 
 ## Features
 
-- Responsive and accessible design
-- Fast performance with Next.js 13 and App Router
-- Tailwind CSS for easy and customizable styling
-- Modular and scalable code structure
+- One-page responsive landing site with clear CTA
+- Hero section with persuasive copy and visual emphasis
+- Informative FAQ accordion component
+- Dark/light theme toggle
+- Mock LLM-powered chat assistant using keyword matching
+- Smooth animations and UI transitions
+- Fully mobile responsive with accessible markup
+
+## Design Choices
+
+- Typography: Roboto font for modern and readable content
+- Color System: Custom HSL-based Tailwind theme for both light and dark modes
+- Layout: Containerized layout with section-based spacing
+- Interactions: Minimal distractions, with interactive elements only where useful (chat, toggle)
+- Chat: Simple rule-based system with OpenAI-style chat UI, but no actual API usage
 
 ## Tech Stack
 
